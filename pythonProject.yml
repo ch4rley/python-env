@@ -1,0 +1,23 @@
+name: pythonProject
+channels:
+  - defaults
+dependencies:
+  - ca-certificates=2019.1.23=0
+  - certifi=2019.3.9=py37_0
+  - django=2.2=py37_0
+  - krb5=1.16.1=hc04afaa_7
+  - libpq=11.2=h3235a2c_0
+  - openssl=1.1.1b=he774522_1
+  - pip=19.1=py37_0
+  - psycopg2=2.7.6.1=py37h7a1dbc1_0
+  - python=3.7.3=h8c8aaf0_1
+  - pytz=2019.1=py_0
+  - setuptools=41.0.1=py37_0
+  - sqlite=3.28.0=he774522_0
+  - tk=8.6.8=hfa6e2cd_0
+  - vc=14.1=h0510ff6_4
+  - vs2015_runtime=14.15.26706=h3a45250_4
+  - wheel=0.33.1=py37_0
+  - wincertstore=0.2=py37_0
+  - zlib=1.2.11=h62dcd97_3
+prefix: C:\Users\Charles\Anaconda3\envs\pythonProject
