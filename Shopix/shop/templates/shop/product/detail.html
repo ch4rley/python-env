@@ -1,0 +1,22 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}Details | Shopix{% endblock %}
+{% block content %}
+    <div class="product-detail">
+        <img src="{% if product.photo %}{{ product.photo.url }}{% else %}
+        {% static "img/no_image.png" %}{% endif %}">
+        <h1>{{ product.name }}</h1>
+        <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
+        <p class="price">Price: &#x20A6;{{ product.price }}</p>
+        <b>Description:</b> {{ product.description }}
+
+        {% if request.user.is_authenticated %}
+            <p><b>Uploaded by:</b> {{ product.user.first_name }}</p>
+            <p style="text-transform:uppercase"><b>Location:</b> {{ product.user.profile.school }}</p>
+            <p><b>Contact:</b> {{ product.user.profile.phone }}</p>
+            <p><b>Stock:</b> {{ product.stock }}</p>
+            <p><b>Uploaded:</b> {{ product.created }}</p>
+            <p><b>Available:</b> {% if product.available %}Yes{% else %}No, check back later.{% endif %}</p>
+        {% endif %}
+    </div>
+{% endblock %}

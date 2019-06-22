@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Log-in{% endblock %}
+
+{% block content %}
+    <div class="loginform">
+        <h1>Log-in</h1>
+        {% if form.errors %}
+        {% else %}
+            <p>Please, use the following form to log-in:</p>
+        {% endif %}
+        <div>
+            <form action="{% url 'login' %}" method="post">
+                {{ form.as_p }}
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ next }}"/>
+                <p><input type="submit" value="Log-in"></p>
+                <p>Don't have an account? <a href="{% url 'register' %}">Create account</a></p>
+            </form>
+        </div>
+    </div>
+{% endblock %}

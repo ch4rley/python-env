@@ -1,0 +1,178 @@
+body { 
+    margin:0;
+    padding:0;
+    font-family:helvetica, sans-serif; 
+}
+
+h1, h2, h3, h4, h5 , h6 { 
+    font-family: 'Ubuntu', sans-serif; font-weight:normal;
+}
+
+a {
+    text-decoration:none;
+    list-style-type: none;
+    color:#5993bb;
+}
+
+a:hover {
+    color:#77b6e2;
+}
+
+a.button, input[type="submit"] {
+    color:#fff;
+    background:#5993bb;
+    border-radius:4px;
+    padding:10px 20px;
+    font-size:14px;
+    border:0;
+}
+
+a.button.light {
+    color:#666;
+    background:#ededed;
+}
+
+.text-left {
+    text-align:left;
+}
+
+.text-right {
+    text-align:right;
+}
+
+table {
+    width:100%;
+    border-spacing:0;
+    border-collapse: collapse; 
+}
+
+table th, table td {
+    text-align:left;
+    font-size:14px;
+    padding:10px;
+    margin:0;
+}
+
+tbody tr:nth-child(odd) {
+    background:#efefef;
+}
+
+tbody tr.subtotal {
+    background:#ccc;
+}
+
+thead th, tbody tr.total {
+    background:#5993bb;
+    color:#fff;
+    font-weight:bold;
+}
+
+table.cart {
+    margin-bottom:40px;
+}
+
+table.cart img {
+    width:180px;
+}
+
+tbody td.num {
+    text-align:right;
+}
+
+td input[type="submit"] {
+    font-size:12px;
+    padding:4px 10px;
+}
+
+form p label, form p input {
+    float:left;
+    clear:both;
+}
+
+form p label {
+    font-size:14px;
+    padding-bottom:4px;
+}
+
+form p input {
+    width:300px;
+    font-size:13px;
+    margin-bottom:10px;
+    padding:10px 12px;
+    border:0;
+    background:#efefef;
+    color:#666;
+    border-radius:4px;
+}
+
+ul.errorlist {
+   float:left;
+   color:#ff0000;
+   clear:both;
+   font-size:13px;
+   margin:0; 
+   padding:0;
+}
+
+#header {
+    padding: 10px 100px;
+    font-size: 14px;
+    background: #000;
+    color: #fff;
+    border-bottom: 4px solid orange;
+    overflow: auto;
+}
+
+#header .logo {
+    font-family: 'Muli', sans-serif;
+    float: left;
+    color: #f3f7cc;
+    font-size: 20px;
+    margin-right: 10%;
+}
+
+#header ul.menu {
+    list-style: none;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+#header ul.menu li {
+    float: left;
+    padding: 4px 10px;
+}
+
+#header ul.menu li.selected a,
+#header ul.menu li.selected a:hover {
+    color: #1b6d32;
+    font-weight: bold;
+}
+
+#header a {
+    color: #f3f7cc;
+}
+
+#header a:hover {
+    color: #fff;
+}
+
+#header .user {
+    float: right;
+    padding-top: 4px;
+}
+
+#content {
+    padding: 30px 100px;
+    /* text-align: center; */
+}
+
+
+.product-list .item img {
+    width:300px;
+    height:300px;
+    margin-bottom:0px;
+}
+
+
+

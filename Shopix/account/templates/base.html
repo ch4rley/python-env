@@ -1,0 +1,57 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
+    <style>
+        .delete {
+        font-weight: bold;
+        background: red;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 14px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <span class="logo">Shopix</span>
+        {% if request.user.is_authenticated %}
+            <ul class="menu">
+                <li {% if section == "dashboard" %}class="selected">
+                <a href="{% url "dashboard" %}">My Dashboard</a>
+                </li>
+                <li {% else %}class="selected"{% endif %}>
+                <a href="{% url "product_list" %}">Shopix</a>
+                </li>
+            </ul>
+        {% endif %}
+        <span class="user">
+            {% if request.user.is_authenticated %}
+                Hello {{ request.user.first_name }}, 
+                <a href="{% url "userproduct" %}">Upload</a> |
+                <a href="{% url "logout" %}">Logout</a>
+            {% else %}
+                <a href="{% url "login" %}">Log-in</a>
+            {% endif %}
+        </span>
+    </div>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li class="{{ message.tags }}">
+                    {{ message|safe }}
+                    <a href="#" class="close">✖</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

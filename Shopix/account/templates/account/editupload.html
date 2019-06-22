@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Edit{% endblock %}
+{% block content %}
+    <div class="loginform" style="width:50%;">
+        <h1>Edit</h1>
+        <p>Please, edit using the following form:</p>
+        <form action="" method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <p><input type="submit" value="Update"></p>
+            <a href={% url 'delete' product.id %}><button class="delete">Delete</button></a>
+        </form>
+    </div>
+{% endblock %}

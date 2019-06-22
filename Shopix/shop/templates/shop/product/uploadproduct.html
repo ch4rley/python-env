@@ -1,0 +1,14 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}Upload Product{% endblock %}
+{% block content %}
+    <div class="loginform" style="width:50%;">
+        <h1>Upload Product</h1>
+        <p>Please, use the following form to upload product:</p>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ userproduct_form.as_p }}
+            <p><input type="submit" value="Upload"></p>
+        </form>
+    </div>
+{% endblock %}

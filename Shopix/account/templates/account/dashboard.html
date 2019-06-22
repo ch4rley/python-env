@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <h1>Dashboard</h1>
+    <p>Welcome to your dashboard. You can <a href="{% url "edit" %}">edit your profile</a>, <a href="{% url "password_change" %}">change your
+password</a> or <a href="{% url "password_reset" %}">reset your password</a>.</p>
+
+        {% for product in products %}
+            <a href="{% url 'editupload' product.id  %}">
+                <div style="width:300px;float:left;margin-right:10px;border: 1px solid black;display: inline-block;vertical-align: top;" >
+                    <img src="{% if product.photo %}{{ product.photo.url }}{% endif %}" width=300 height=300>
+                    <div>
+                        <p>{{ product.name }}</p>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+{% endblock %}
